@@ -38,15 +38,11 @@ Este controlador gerencia a inscrição e o envio de notificações:
 
 A API é configurada em um arquivo `Program.cs`, onde os controladores são registrados e as rotas são mapeadas.
 
-```csharp
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllers(); // Habilita controladores
-
-#### 3. Modelo de Dados
+### 3. Modelo de Dados
 
 A API utiliza alguns modelos para gerenciar as informações necessárias para as notificações. Aqui estão os principais modelos utilizados:
 
-##### 3.1 PushSubscription
+#### 3.1 PushSubscription
 
 O modelo `PushSubscription` contém os detalhes da assinatura do usuário para notificações push. Geralmente, inclui informações como endpoint, chaves e outros parâmetros necessários para a entrega das notificações. Este modelo é essencial para gerenciar as inscrições.
 
@@ -57,8 +53,11 @@ public class PushSubscription
     public string P256dh { get; set; }
     public string Auth { get; set; }
 }
+ ```
 
 ## Referências para Web Push Notifications
+
+Aqui estão algumas referências úteis sobre Web Push Notifications:
 
 1. **[MDN Web Docs - Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)**  
    Documentação oficial da Mozilla sobre como implementar e usar Push Notifications em aplicações web.
@@ -80,4 +79,9 @@ public class PushSubscription
 
 7. **[Service Workers - MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)**  
    A importância dos Service Workers para a implementação de Push Notifications, incluindo como registrar e gerenciar Service Workers.
+
+
+
+
+
 
